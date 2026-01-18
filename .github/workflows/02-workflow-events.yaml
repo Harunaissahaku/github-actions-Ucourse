@@ -1,0 +1,10 @@
+name: 02 - Workflow Events
+on:
+  push
+  
+jobs:
+  name: echo
+  runs-on: ubuntu-latest
+  steps:
+    - name: echo
+      run: Show the event that triggered the workflow
