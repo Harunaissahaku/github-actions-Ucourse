@@ -12,13 +12,12 @@ jobs:
       - name: Say hello
         run: echo "hello World"
 
-jobs: say-goodbye:
-  runs-on: ubuntu-latest
-  steps:
-    - name: failed step
-      run: |
-        echo "i will fail"
-        exit 1
-        name: say goodbye
+  say-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: failed step
+        run: |
+          echo "i will fail"
+          exit 1
+      - name: say goodbye
         run: echo "goodbye World"
-  
