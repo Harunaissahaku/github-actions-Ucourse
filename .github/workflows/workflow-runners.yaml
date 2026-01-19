@@ -1,21 +1,23 @@
 name: Workflow Runners
+
 on:
   push:
     branches:
       - main
+
 jobs:
   ubuntu-echo:
     runs-on: ubuntu-latest
     steps:
-      - name: show ubuntu
+      - name: Show Ubuntu runner
         run: |
-          echo "this runner is running on ubuntu OS"
-          echo "the runner is ${{ runner.os }}"
-jobs:
+          echo "This runner is running on Ubuntu OS"
+          echo "The runner OS is ${{ runner.os }}"
+
   windows-echo:
     runs-on: windows-latest
-  steps:
-    - name: show windows
-      run: |
-        echo "this runner is running on ubuntu OS"
-        echo "the runner is ${{ runner.os }}"
+    steps:
+      - name: Show Windows runner
+        run: |
+          echo "This runner is running on Windows OS"
+          echo "The runner OS is ${{ runner.os }}"
