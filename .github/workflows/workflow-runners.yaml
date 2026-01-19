@@ -22,3 +22,11 @@ jobs:
         run: |
           echo "This runner is running on Windows OS"
           echo "The runner OS is ${{ runner.os }}"
+  macos-echo:
+    runs-on: macos-latest
+    steps:
+      - name: Show macos
+        shell: bash
+        run: |
+          echo "This runner is running on Mac OS"
+          echo "The runner OS is ${{ runner.os }}"
