@@ -1,13 +1,16 @@
+
 name: 06 - Contexts
 
 on:
   workflow_dispatch:
-run-name: My custom workflow run name - ${{ runner.os }}
+
+run-name: My custom workflow run name
+
 jobs:
   echo-data:
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Display Information
         run: |
           echo "Event name: ${{ github.event_name }}"
@@ -17,6 +20,7 @@ jobs:
           echo "Workflow: ${{ github.workflow }}"
           echo "Run ID: ${{ github.run_id }}"
           echo "Run number: ${{ github.run_number }}"
+          echo "Runner OS: ${{ runner.os }}"
 
       - name: Retrieve Variable
         run: |
